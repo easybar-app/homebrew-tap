@@ -1,10 +1,10 @@
 class EasybarCalendarAgent < Formula
   desc "Calendar EventKit helper service for EasyBar"
   homepage "https://github.com/gi8lino/easybar"
-  url "https://github.com/gi8lino/easybar/releases/download/v0.27.1/EasyBarCalendarAgent-0.27.1.zip"
-  sha256 "bfed3f99581463fba5d60d342b4aa70e4127ec5539e1283a03a7b09d39becfc9"
+  url "https://github.com/gi8lino/easybar/releases/download/v0.28.1/EasyBarCalendarAgent-0.28.1.zip"
+  sha256 "9fdbd0c2249a1530c238b8341d1e0b1bd6aaa685e4361b9aa51a594594a18fae"
   license "Apache-2.0"
-  version "0.27.1"
+  version "0.28.1"
 
   depends_on macos: :sonoma
 
