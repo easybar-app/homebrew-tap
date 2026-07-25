@@ -1,10 +1,10 @@
 class EasybarNetworkAgent < Formula
   desc "Wi-Fi and network helper service for EasyBar"
   homepage "https://github.com/gi8lino/easybar"
-  url "https://github.com/gi8lino/easybar/releases/download/v0.30.4/EasyBarNetworkAgent-0.30.4.zip"
-  sha256 "cd43b74cc28d145680d5b551e8a028b8c14837a7d13e927567e2d91901f8f19c"
+  url "https://github.com/gi8lino/easybar/releases/download/v0.30.6/EasyBarNetworkAgent-0.30.6.zip"
+  sha256 "1d90c26e24dbe13091ce36fec6d1cf650f5544cb4bb6d468cbea364b6e18ca52"
   license "Apache-2.0"
-  version "0.30.4"
+  version "0.30.6"
 
   depends_on macos: :sonoma
 

@@ -1,8 +1,8 @@
 cask "easybar" do
-  version "0.30.4"
-  sha256 "827ea34ea7c6048e1772999f07a7621b5426cb4d51f51fe291e82aedf18fd5a1"
+  version "0.30.6"
+  sha256 "d23f2b9104ebc293a03d7e55a31dda2d5d42a9b44bdb9099962b9d79d54491e2"
 
-  url "https://github.com/gi8lino/easybar/releases/download/v0.30.4/EasyBar-0.30.4.zip"
+  url "https://github.com/gi8lino/easybar/releases/download/v0.30.6/EasyBar-0.30.6.zip"
   name "EasyBar"
   desc "Scriptable macOS status bar with SwiftUI and Lua widgets"
   homepage "https://github.com/gi8lino/easybar"
