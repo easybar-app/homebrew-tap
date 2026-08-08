@@ -1,13 +1,13 @@
-# gi8lino/homebrew-tap
+# easybar-app/homebrew-tap
 
 Homebrew tap for `easybar` and `wifisnitch`.
 
 ## Install
 
 ```bash
-brew tap gi8lino/tap
-brew install gi8lino/tap/easybar
-brew install gi8lino/tap/wifisnitch
+brew tap easybar-app/tap
+brew install easybar-app/tap/easybar
+brew install easybar-app/tap/wifisnitch
 ```
 
 ## Services
@@ -30,7 +30,7 @@ brew services stop wifisnitch
 ## Upgrade
 
 ```bash
-brew upgrade gi8lino/tap/easybar gi8lino/tap/wifisnitch
+brew upgrade easybar-app/tap/easybar easybar-app/tap/wifisnitch
 brew services restart easybar
 brew services restart wifisnitch
 ```
@@ -40,10 +40,10 @@ brew services restart wifisnitch
 ```bash
 brew services stop easybar
 brew services stop wifisnitch
-brew uninstall gi8lino/tap/easybar gi8lino/tap/wifisnitch
+brew uninstall easybar-app/tap/easybar easybar-app/tap/wifisnitch
 ```
 
 ## Source
 
-- [easybar](https://github.com/gi8lino/easybar)
+- [easybar](https://github.com/easybar-app/easybar)
 - [wifisnitch](https://github.com/gi8lino/wifisnitch)

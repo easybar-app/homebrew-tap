@@ -2,10 +2,10 @@ cask "easybar" do
   version "0.41.0"
   sha256 "77b82c240da0cb16c779b03c107d0d75782a791f6e386866a36669b1a3cde9df"
 
-  url "https://github.com/gi8lino/easybar/releases/download/v0.41.0/EasyBar-0.41.0.zip"
+  url "https://github.com/easybar-app/easybar/releases/download/v0.41.0/EasyBar-0.41.0.zip"
   name "EasyBar"
   desc "Scriptable macOS status bar with SwiftUI and Lua widgets"
-  homepage "https://github.com/gi8lino/easybar"
+  homepage "https://github.com/easybar-app/easybar"
 
   depends_on formula: [
     "easybar-calendar-agent",
