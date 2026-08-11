@@ -1,42 +1,52 @@
-# easybar-app/homebrew-tap
+# EasyBar Homebrew Tap
 
-Homebrew tap for `easybar`.
+The official Homebrew tap for EasyBar products and their helper services.
 
-## Install
+## Requirements
+
+- macOS 14 Sonoma or newer
+- [Homebrew](https://brew.sh/)
+
+## Installation
+
+Install EasyBar:
 
 ```bash
 brew tap easybar-app/tap
-brew install easybar-app/tap/easybar
+brew install --cask easybar-app/tap/easybar
+open -a EasyBar
 ```
 
-## Services
-
-```bash
-brew services start easybar
-```
+Install EasyBar Native:
 
 ```bash
-brew services restart easybar
+brew tap easybar-app/tap
+brew install --cask easybar-app/tap/easybar-native
+open -a "EasyBar Native"
 ```
 
-```bash
-brew services stop easybar
-```
+EasyBar's calendar and network helper agents are installed as cask dependencies and managed through
+Homebrew Services. EasyBar Native does not install those agents.
 
 ## Upgrade
 
 ```bash
-brew upgrade easybar-app/tap/easybar
-brew services restart easybar
+brew update
+brew upgrade --cask easybar-app/tap/easybar
+brew upgrade --cask easybar-app/tap/easybar-native
 ```
 
-## Remove
+## Uninstall
 
 ```bash
-brew services stop easybar
-brew uninstall easybar-app/tap/easybar
+brew uninstall --cask easybar-app/tap/easybar
+brew uninstall --cask easybar-app/tap/easybar-native
 ```
 
-## Source
+See the [EasyBar installation guide](https://easybar.dev/products/easybar/installation/) and
+[EasyBar Native installation guide](https://easybar.dev/products/easybar-native/installation/) for
+verification, service management, upgrades, and complete removal.
 
-- [easybar](https://github.com/easybar-app/easybar)
+## License
+
+Packages retain the licenses declared by their upstream projects.
