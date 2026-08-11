@@ -49,4 +49,5 @@ verification, service management, upgrades, and complete removal.
 
 ## License
 
-Packages retain the licenses declared by their upstream projects.
+The tap is licensed under the [Apache License 2.0](./LICENSE). Distributed applications and helper
+agents retain the licenses declared by their upstream projects.
