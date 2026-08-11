@@ -1,8 +1,8 @@
 cask "easybar-native" do
-  version "0.3.0"
-  sha256 "767d6c80fe400e907d771630e236baccc4e8b727d6e0ddbed3bf14fe15235130"
+  version "0.3.1"
+  sha256 "53a2cd8dcf6d44d36c4a65b4b35cadb7933704497648f62517d485799d64f1fb"
 
-  url "https://github.com/easybar-app/easybar-native/releases/download/v0.3.0/EasyBarNative-0.3.0.zip"
+  url "https://github.com/easybar-app/easybar-native/releases/download/v0.3.1/EasyBarNative-0.3.1.zip"
   name "EasyBar Native"
   desc "Native macOS menu-bar frontend for EasyBarKit Lua widgets"
   homepage "https://github.com/easybar-app/easybar-native"
