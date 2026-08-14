@@ -1,8 +1,8 @@
 cask "easybar" do
-  version "0.63.7"
-  sha256 "3e26f384d63c157492d3abb6204e0d48e1c4251c4d4349cc0d8d8300bb5b0150"
+  version "0.63.8"
+  sha256 "365fcf7ab12f2c50a32f15f694f7106b873beb4faa22433e1364bcbd20e5d507"
 
-  url "https://github.com/easybar-app/easybar/releases/download/v0.63.7/EasyBar-0.63.7.zip"
+  url "https://github.com/easybar-app/easybar/releases/download/v0.63.8/EasyBar-0.63.8.zip"
   name "EasyBar"
   desc "Scriptable status bar with SwiftUI and Lua widgets"
   homepage "https://easybar.dev/"
@@ -24,21 +24,16 @@ cask "easybar" do
     run "/usr/bin/xattr",
         args: ["-dr", "com.apple.quarantine", "{{appdir}}/EasyBar.app"],
         must_succeed: false
-    run "{{HOMEBREW_BREW_FILE}}",
-        args: ["services", "restart", "easybar-app/tap/easybar-calendar-agent"]
-    run "{{HOMEBREW_BREW_FILE}}",
-        args: ["services", "restart", "easybar-app/tap/easybar-network-agent"]
-  end
-
-  uninstall_preflight_steps do
-    run "{{HOMEBREW_BREW_FILE}}",
-        args: ["services", "stop", "easybar-app/tap/easybar-calendar-agent"]
-    run "{{HOMEBREW_BREW_FILE}}",
-        args: ["services", "stop", "easybar-app/tap/easybar-network-agent"]
   end
 
   zap trash: [
     "~/.config/easybar",
     "~/.local/state/easybar",
   ]
+
+  caveats <<~EOS
+    After installing or upgrading EasyBar, activate the helper services with:
+      brew services restart easybar-app/tap/easybar-calendar-agent
+      brew services restart easybar-app/tap/easybar-network-agent
+  EOS
 end
