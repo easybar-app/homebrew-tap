@@ -24,21 +24,16 @@ cask "easybar" do
     run "/usr/bin/xattr",
         args: ["-dr", "com.apple.quarantine", "{{appdir}}/EasyBar.app"],
         must_succeed: false
-    run "{{HOMEBREW_BREW_FILE}}",
-        args: ["services", "restart", "easybar-app/tap/easybar-calendar-agent"]
-    run "{{HOMEBREW_BREW_FILE}}",
-        args: ["services", "restart", "easybar-app/tap/easybar-network-agent"]
-  end
-
-  uninstall_preflight_steps do
-    run "{{HOMEBREW_BREW_FILE}}",
-        args: ["services", "stop", "easybar-app/tap/easybar-calendar-agent"]
-    run "{{HOMEBREW_BREW_FILE}}",
-        args: ["services", "stop", "easybar-app/tap/easybar-network-agent"]
   end
 
   zap trash: [
     "~/.config/easybar",
     "~/.local/state/easybar",
   ]
+
+  caveats <<~EOS
+    After installing or upgrading EasyBar, activate the helper services with:
+      brew services restart easybar-app/tap/easybar-calendar-agent
+      brew services restart easybar-app/tap/easybar-network-agent
+  EOS
 end
