@@ -1,16 +1,15 @@
 class EasybarCalendarAgent < Formula
   desc "Calendar EventKit helper service for EasyBar"
   homepage "https://github.com/easybar-app/easybar"
-  url "https://github.com/easybar-app/easybar/releases/download/v0.62.2/EasyBarCalendarAgent-0.62.2.zip"
-  sha256 "5f01c68557b0dc14e61bedaa02d36160b1e5894f2b9bd7d91b436e0d5a45b4b4"
+  url "https://github.com/easybar-app/easybar/releases/download/v0.63.6/EasyBarCalendarAgent-0.63.6.zip"
+  sha256 "94527b912b5359729f098b66b94829539182e111365cc7ba1dace32237dc0816"
   license "Apache-2.0"
-  version "0.62.2"
+  version "0.63.6"
 
   depends_on macos: :sonoma
 
   def install
     libexec.install "EasyBarCalendarAgent.app"
-    system "xattr", "-dr", "com.apple.quarantine", libexec/"EasyBarCalendarAgent.app"
     (var/"log/easybar").mkpath
   end
 
@@ -25,6 +24,6 @@ class EasybarCalendarAgent < Formula
   end
 
   test do
-    assert_predicate libexec/"EasyBarCalendarAgent.app", :exist?
+    assert_predicate libexec/"EasyBarCalendarAgent.app/Contents/MacOS/EasyBarCalendarAgent", :executable?
   end
 end

@@ -1,16 +1,15 @@
 class EasybarNetworkAgent < Formula
   desc "Wi-Fi and network helper service for EasyBar"
   homepage "https://github.com/easybar-app/easybar"
-  url "https://github.com/easybar-app/easybar/releases/download/v0.62.2/EasyBarNetworkAgent-0.62.2.zip"
-  sha256 "699ec7188e6f5bbad07b22f1a8f174ec66c225c6c54a100408287664156684f9"
+  url "https://github.com/easybar-app/easybar/releases/download/v0.63.6/EasyBarNetworkAgent-0.63.6.zip"
+  sha256 "7e6173603bf402676d36121a8ea608c683c4b8b17ae1d0531bba3553a3087c20"
   license "Apache-2.0"
-  version "0.62.2"
+  version "0.63.6"
 
   depends_on macos: :sonoma
 
   def install
     libexec.install "EasyBarNetworkAgent.app"
-    system "xattr", "-dr", "com.apple.quarantine", libexec/"EasyBarNetworkAgent.app"
     (var/"log/easybar").mkpath
   end
 
@@ -25,6 +24,6 @@ class EasybarNetworkAgent < Formula
   end
 
   test do
-    assert_predicate libexec/"EasyBarNetworkAgent.app", :exist?
+    assert_predicate libexec/"EasyBarNetworkAgent.app/Contents/MacOS/EasyBarNetworkAgent", :executable?
   end
 end
