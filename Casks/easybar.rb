@@ -8,8 +8,8 @@ cask "easybar" do
   homepage "https://easybar.dev/"
 
   depends_on formula: [
-    "easybar-calendar-agent",
-    "easybar-network-agent",
+    "easybar-app/tap/easybar-calendar-agent",
+    "easybar-app/tap/easybar-network-agent",
     "lua",
   ]
   depends_on macos: :sonoma
@@ -25,16 +25,16 @@ cask "easybar" do
         args: ["-dr", "com.apple.quarantine", "{{appdir}}/EasyBar.app"],
         must_succeed: false
     run "{{HOMEBREW_BREW_FILE}}",
-        args: ["services", "restart", "easybar-calendar-agent"]
+        args: ["services", "restart", "easybar-app/tap/easybar-calendar-agent"]
     run "{{HOMEBREW_BREW_FILE}}",
-        args: ["services", "restart", "easybar-network-agent"]
+        args: ["services", "restart", "easybar-app/tap/easybar-network-agent"]
   end
 
   uninstall_preflight_steps do
     run "{{HOMEBREW_BREW_FILE}}",
-        args: ["services", "stop", "easybar-calendar-agent"]
+        args: ["services", "stop", "easybar-app/tap/easybar-calendar-agent"]
     run "{{HOMEBREW_BREW_FILE}}",
-        args: ["services", "stop", "easybar-network-agent"]
+        args: ["services", "stop", "easybar-app/tap/easybar-network-agent"]
   end
 
   zap trash: [
