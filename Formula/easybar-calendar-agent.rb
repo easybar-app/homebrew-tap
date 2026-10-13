@@ -4,7 +4,6 @@ class EasybarCalendarAgent < Formula
   url "https://github.com/easybar-app/easybar/releases/download/v0.64.3/EasyBarCalendarAgent-0.64.3.zip"
   sha256 "d55e18b4f9643c7af69a475e0ac42b36257edc2bbca78d9817a879b8305c78f3"
   license "Apache-2.0"
-  version "0.64.3"
 
   depends_on macos: :sonoma
 

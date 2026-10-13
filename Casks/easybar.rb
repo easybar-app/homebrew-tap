@@ -2,7 +2,7 @@ cask "easybar" do
   version "0.64.3"
   sha256 "f3a4cc14ebce63f4ae60cf32b7a572f24944e3eeef8802d7851e2a4cb713d321"
 
-  url "https://github.com/easybar-app/easybar/releases/download/v0.64.3/EasyBar-0.64.3.zip"
+  url "https://github.com/easybar-app/easybar/releases/download/v#{version}/EasyBar-#{version}.zip"
   name "EasyBar"
   desc "Scriptable status bar with SwiftUI and Lua widgets"
   homepage "https://easybar.dev/"

@@ -4,7 +4,6 @@ class EasybarNetworkAgent < Formula
   url "https://github.com/easybar-app/easybar/releases/download/v0.64.3/EasyBarNetworkAgent-0.64.3.zip"
   sha256 "8735ac16ceb89e760761c3740f09d6b15084fd3a3967ad0ddf5082623104a56b"
   license "Apache-2.0"
-  version "0.64.3"
 
   depends_on macos: :sonoma
 
