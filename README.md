@@ -47,6 +47,19 @@ See the [EasyBar installation guide](https://easybar.dev/products/easybar/instal
 [EasyBar Native installation guide](https://easybar.dev/products/easybar-native/installation/) for
 verification, service management, upgrades, and complete removal.
 
+## Release metadata contract
+
+Each cask and formula must point at one immutable, versioned GitHub release asset with a SHA-256.
+Run the repository check before committing a release update:
+
+```bash
+ruby scripts/check_release_metadata.rb
+```
+
+The check ensures Cask versions are interpolated into both the release tag and asset name, and that
+Formula release tags match their asset versions. It complements `brew audit`, which can only audit a
+tap after it has been installed by Homebrew.
+
 ## License
 
 The tap is licensed under the [Apache License 2.0](./LICENSE). Distributed applications and helper
